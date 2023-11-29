@@ -28,7 +28,7 @@ DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
 ALLOWED_HOSTS = ['richmondlibraryapp-prod-production.up.railway.app', '127.0.0.1']
 
-CSRF_TRUSTED_ORIGINS = ['https://richmondlibraryapp-prod-production.up.railway.app']
+CSRF_TRUSTED_ORIGINS = ['https://richmondlibraryapp-prod-production.up.railway.app', 'https://*.127.0.0.1']
 
 
 # Application definition
@@ -154,6 +154,8 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 # The URL to use when referring to static files (where they will be served from)
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [BASE_DIR / "static"]
 
 # Add your Google Books API key here
 GOOGLE_BOOKS_API_KEY = 'AIzaSyCL1t6vOT0a3kHjXUiTn_kXe23rOa3ODt8'
