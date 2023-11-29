@@ -81,7 +81,11 @@ pip install Django==4.2.5
 pip install django-bootstrap-v5  
 pip install Pillow  
 pip install django-elasticsearch-dsl  
-pip install django-allauth  
+pip install django-allauth
+pip install gunicorn
+pip install dj-database-url
+pip install psycopg2-binary
+pip install whitenoise
 
 Commands:  
 python manage.py runserver (runs the server locally)  
