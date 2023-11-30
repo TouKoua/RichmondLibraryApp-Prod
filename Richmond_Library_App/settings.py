@@ -109,9 +109,7 @@ DATABASES = {
 
 ELASTICSEARCH_DSL = {
     'default': {
-        'hosts': 'https://localhost:9200',
-        'http_auth': ('elastic', 'Qo*cisAZQzQNkc*40zVl'),
-        'ca_certs': 'D:\ElasticSearch\elasticsearch-8.10.4\config\certs\http_ca.crt',
+        'hosts': 'https://651835aa76b74aa9b40245b228ebc63d.us-central1.gcp.cloud.es.io'
     }
 }
 
