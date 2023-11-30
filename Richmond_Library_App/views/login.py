@@ -27,7 +27,7 @@ class Login(View):
 class Logout(View):
     def get(self, request):
         logout(request)
-        return render(request, "login.html", {"errorMessage": "You have been logged out!"})
+        return render(request, "index.html", {"errorMessage": "You have been logged out!"})
     
     # This is for relogging into the app after clicking the logout button
     def post(self, request):
@@ -46,4 +46,4 @@ class Logout(View):
             login(request, user)
             return redirect('/home/')
         else:
-            return render(request, "login.html", {"errorMessage": "Invalid username or password"})
+            return render(request, "index.html", {"errorMessage": "Invalid username or password"})
