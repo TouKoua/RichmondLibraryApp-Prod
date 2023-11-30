@@ -1,5 +1,6 @@
 from django.views import View
 from django.shortcuts import render, redirect
+from django.contrib.auth.hashers import make_password
 from Richmond_Library_App.models import User
 
 class UsersPage(View):
@@ -25,7 +26,7 @@ class EditUser(View):
         user = User.objects.get(username=kwargs["_username"])
         # user.username = request.POST.get("_username")
         user.email = request.POST.get("_email")
-        user.password = request.POST.get("_password")
+        user.password = make_password(request.POST.get("_password"))
         user.user_type=request.POST.get("_user_type")
         user.save()
 
