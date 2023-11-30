@@ -5,7 +5,7 @@ from django.contrib.auth import authenticate, login, logout
 class Login(View):
     
     def get(self, request):
-        return render(request, "login.html", {})
+        return render(request, "index.html", {})
     def post(self, request):
         # grabs the username and password provided
         # from the form on login.html
@@ -22,7 +22,7 @@ class Login(View):
             login(request, user)
             return redirect('/home/')
         else:
-            return render(request, "login.html", {"errorMessage": "Invalid username or password"})
+            return render(request, "index.html", {"errorMessage": "Invalid username or password"})
 
 class Logout(View):
     def get(self, request):
