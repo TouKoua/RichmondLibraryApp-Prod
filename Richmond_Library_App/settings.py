@@ -109,7 +109,8 @@ DATABASES = {
 
 ELASTICSEARCH_DSL = {
     'default': {
-        'hosts': 'https://651835aa76b74aa9b40245b228ebc63d.us-central1.gcp.cloud.es.io'
+        'hosts': 'https://651835aa76b74aa9b40245b228ebc63d.us-central1.gcp.cloud.es.io:9243/',
+        'http_auth': ('elastic', 'WBqsgjKWuZari9ocPnjzrb8E')
     }
 }
 
