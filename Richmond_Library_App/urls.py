@@ -25,6 +25,7 @@ from Richmond_Library_App.views.profile import Profile
 from Richmond_Library_App.views.addBook import BookCreateView
 from Richmond_Library_App.views.checkout import Checkout
 from Richmond_Library_App.views.remove_book import remove_book
+from Richmond_Library_App.views.allBooks import AllBooks
 
 
 urlpatterns = [
@@ -33,6 +34,7 @@ urlpatterns = [
     path("accounts/", include("allauth.urls")),
     path('logout/', Logout.as_view(), name="Logout"),
     path('home/', Home.as_view(), name="Home"),
+    path('allBooks/', AllBooks.as_view(), name="AllBooks"),
     # <str:bookname> will set url to be modifiable depending on
     # the book name.
     path('book/<str:bookname>/', BookPage.as_view(), name="Book"),
