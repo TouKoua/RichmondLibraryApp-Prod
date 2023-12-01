@@ -26,7 +26,10 @@ class EditUser(View):
         user = User.objects.get(username=kwargs["_username"])
         # user.username = request.POST.get("_username")
         user.email = request.POST.get("_email")
-        user.password = make_password(request.POST.get("_password"))
+        if not request.POST.get("_password"):
+            user.password = user.password
+        else:
+            user.password = make_password(request.POST.get("_password"))
         user.user_type=request.POST.get("_user_type")
         user.save()
 
